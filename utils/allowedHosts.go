@@ -1,7 +1,8 @@
 package utils
 
-import "net/url"
-
+import (
+	"net/url"
+)
 
 var AllowedHosts = map[string]bool{
 	"youtube.com":       true,
@@ -42,11 +43,11 @@ var AllowedHosts = map[string]bool{
 	"www.kick.com":      true,
 }
 
-func ValidateURL(videoURL string) bool{
+func ValidateURL(videoURL string) bool {
 	parsed, err := url.ParseRequestURI(videoURL)
-		if err != nil{
-			return  false
-		}
-		_, ok := AllowedHosts[parsed.Host]
-		return ok
+	if err != nil {
+		return false
+	}
+	_, ok := AllowedHosts[parsed.Host]
+	return ok
 }
