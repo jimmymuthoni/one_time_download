@@ -47,7 +47,7 @@
         <section class="flex flex-col md:flex-row items-center justify-center gap-8">
 
             <div class="w-full md:w-1/2 relative h-64 md:h-80 rounded-lg shadow-lg overflow-hidden"
-                x-data="{ index: 0, images: ['/static/facebook_anime.png', '/static/instagram_anime.png', '/static/linkedin_anime.png', '/static/twitter_anime.png', '/static/youtube_animepng'] }"
+                x-data="{ index: 0, images: ['/static/facebook_anime.png', '/static/instagram_anime.png', '/static/linkedln_anime.png', '/static/twitter_anime.png', '/static/youtube_anime.png'] }"
                 x-init="setInterval(() => { index = (index + 1) % images.length }, 4000)">
                 <template x-for="(img, i) in images" :key="i">
                     <img :src="img" alt="Carousel Image"
@@ -77,7 +77,7 @@
     <div id="loading-indicator"
         class="htmx-indicator fixed inset-0 justify-center items-center bg-neutral-900 bg-opacity-80 z-50 hidden">
         <div class="flex flex-col items-center">
-            <img src="/static/spinning-dots.svg" alt="Loading" class="w-32 h-32">
+            <img src="/static/spinning_dots.svg" alt="Loading" class="w-32 h-32">
             <p class="text-xl mt-4">Fetching Video Info...</p>
         </div>
     </div>
