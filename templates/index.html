@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Download any videos from YouTube, Instagram, X etc." />
-    <title>OneTimeDownload</title>
+    <meta name="description" content="Download videos from YouTube, Instagram, etc." />
+    <title>EverDownload</title>
     <link rel="preload" href="https://unpkg.com/htmx.org@1.9.6" as="script">
     <link rel="preload" href="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js" as="script">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,6 +29,7 @@
         .htmx-indicator {
             display: none;
         }
+
         .htmx-request .htmx-indicator {
             display: flex !important;
         }
@@ -40,12 +42,12 @@
 
 <body class="bg-neutral-900 text-white min-h-screen">
     <div class="container mx-auto px-4 py-8">
-        <h2 class="text-2xl font-bold text-center mb-2">OneTimeDownload - Download Videos</h2>
-        <p class="text-sm text-center text-gray-300 mb-6">Supports YouTube, Instagram, and more!</p>
+        <h2 class="text-2xl font-bold text-center mb-2">EverDownload - Download Videos</h2>
+        <p class="text-sm text-center text-gray-300 mb-6">Supports YouTube, Instagram, Twitter And more!</p>
         <section class="flex flex-col md:flex-row items-center justify-center gap-8">
 
             <div class="w-full md:w-1/2 relative h-64 md:h-80 rounded-lg shadow-lg overflow-hidden"
-                x-data="{ index: 0, images: ['/static/youtube_anime.png', '/static/youtube_anime.png', '/static/linkedln_anime.png', '/static/instagram_anime.png', '/static/facebook_anime.png'] }"
+                x-data="{ index: 0, images: ['/static/facebook_anime.png', '/static/instagram_anime.png', '/static/linkedin_anime.png', '/static/twitter_anime.png', '/static/youtube_animepng'] }"
                 x-init="setInterval(() => { index = (index + 1) % images.length }, 4000)">
                 <template x-for="(img, i) in images" :key="i">
                     <img :src="img" alt="Carousel Image"
